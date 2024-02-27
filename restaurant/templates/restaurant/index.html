@@ -56,8 +56,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">TABLE</a>
+                    <a href="{% url 'restaurant:index' %}" class="nav-item nav-link active">Home</a>
+                    <a href="{% url 'restaurant:booking_view' %}" class="nav-item nav-link">TABLE</a>
                     <a href="product.html" class="nav-item nav-link">Products</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
@@ -152,86 +152,88 @@
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-5 mb-3">BOOK TABLE</h1>
-                <!-- <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p> -->
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                    <div id="A1" class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-1.png' %}" alt="">
                         <h4 class="mb-3">A1</h4>
-                        <!-- <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p> -->
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="{% url 'restaurant:booking_view' %}">BOOK</a>
+                        <a id="bookA1" class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="{% url 'restaurant:booking_view' %}" onclick="changeStatus('A1')">BOOK</a>
                     </div>
                 </div>
-                
                 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
+                    <div id="A2" class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-2.png' %}" alt="">
                         <h4 class="mb-3">A2</h4>
-                        <!-- <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p> -->
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
+                        <a id="bookA2" class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="" onclick="changeStatus('A2')">BOOK</a>
                     </div>
                 </div>
+                
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
+                    <div id="A3" class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-3.png' %}" alt="">
                         <h4 class="mb-3">A3</h4>
-                        <!-- <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p> -->
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
+                        <a id="bookA3" class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="" onclick="changeStatus('A3')">BOOK</a>
                     </div>
                 </div>
+    
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
+                    <div id="A4" class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-3.png' %}" alt="">
                         <h4 class="mb-3">A4</h4>
-                        <!-- <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p> -->
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
+                        <a id="bookA4" class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="" onclick="changeStatus('A4')">BOOK</a>
                     </div>
                 </div>
+    
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
+                    <div id="A5" class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-3.png' %}" alt="">
                         <h4 class="mb-3">A5</h4>
-                        <!-- <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p> -->
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
+                        <a id="bookA5" class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="" onclick="changeStatus('A5')">BOOK</a>
                     </div>
                 </div>
+    
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
+                    <div id="A6" class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="{% static 'img/icon-3.png' %}" alt="">
                         <h4 class="mb-3">A6</h4>
-                        <!-- <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p> -->
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
+                        <a id="bookA6" class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="" onclick="changeStatus('A6')">BOOK</a>
                     </div>
-                </div>
-                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Biologically Safe</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Biologically Safe</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">BOOK</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
-                        <h4 class="mb-3">Biologically Safe</h4>
-                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
-                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        function changeStatus(tableID) {
+            var button = document.getElementById("book" + tableID);
+            button.innerHTML = "Pending";
+            button.classList.remove("btn-outline-primary");
+            button.classList.add("btn-outline-secondary");
+            showConfirmation(tableID); // Call showConfirmation function to display confirmation
+        }
+    
+        function showConfirmation(tableID) {
+            var confirmationDiv = document.getElementById("bookingConfirmation");
+            var confirmationTable = document.getElementById("confirmationTable");
+            var confirmationDate = document.getElementById("confirmationDate");
+            var confirmationTime = document.getElementById("confirmationTime");
+            
+            // Set the selected table ID
+            confirmationTable.innerHTML = "Table: " + tableID;
+            
+            // Set the current date and time (you can replace this with actual values)
+            var currentDate = new Date().toLocaleDateString();
+            var currentTime = new Date().toLocaleTimeString();
+            confirmationDate.innerHTML = currentDate;
+            confirmationTime.innerHTML = currentTime;
+            
+            // Show the booking confirmation section
+            confirmationDiv.style.display = "block";
+        }
+    </script>
+    
     <!-- Feature End -->
 
 
